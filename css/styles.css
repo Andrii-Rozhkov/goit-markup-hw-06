@@ -292,7 +292,8 @@ a[href="#studio"]:active {
 
 .hero {
     max-width: 1440px;
-    padding: 188px 0;
+
+    padding: 72px 0;
     margin: auto;
     background-color: #2E2F42;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
@@ -302,18 +303,48 @@ a[href="#studio"]:active {
     background-size: cover;
 }
 
+@media only screen and (min-width: 768px) {
+    .hero {
+        padding: 112px 0;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .hero {
+        padding: 188px 0;
+    }
+}
+
 .hero-title {
-    padding-bottom: 48px;
-    max-width: 496px;
+    text-align: center;
+    padding-bottom: 72px;
+
+    max-width: 200px;
     margin: 0 auto;
     color: white;
-    font-size: 56px;
+    font-size: 36px;
+    line-height: 1.11;
     font-family: 'Roboto',
         sans-serif;
     font-weight: 700;
-    text-align: center;
-    line-height: 1.07;
     letter-spacing: 0.02em;
+    text-transform: capitalize;
+}
+
+@media only screen and (min-width: 768px) {
+    .hero-title {
+        max-width: 496px;
+        padding-bottom: 36px;
+        font-size: 56px;
+        line-height: 1.07;
+        text-transform: none;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .hero-title {
+        padding-bottom: 48px;
+    }
 }
 
 .hero-btn,
@@ -344,16 +375,27 @@ a[href="#studio"]:active {
 
 .features-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 24px;
+    gap: 72px 24px;
 }
 
-.features-card {
-    width: calc((100% - 3 * 24px) / 4);
+.features-card {}
+
+@media only screen and (min-width: 768px) {
+    .features-card {
+        width: calc((100% - 24px) / 2);
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .features-card {
+        width: calc((100% - 3 * 24px) / 4);
+    }
 }
 
 .features-icon-box {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     height: 112px;
@@ -362,6 +404,21 @@ a[href="#studio"]:active {
     border: 1px solid #8E8F99;
     background-color: #F4F4FD;
     margin-bottom: 8px;
+}
+
+@media only screen and (min-width: 1158px) {
+    .features-icon-box {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 1157.98px) {
+    .features-text-title {
+        font-size: 36px;
+        line-height: 1.11;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
 }
 
 /* Team */
