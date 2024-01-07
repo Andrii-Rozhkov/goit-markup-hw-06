@@ -31,7 +31,7 @@
             <li>
               <a href="./index.html" class="header-link active">Studio</a>
             </li>
-            <li><a href="" class="header-link">Portfolio</a></li>
+            <li><a href="#portfolio" class="header-link">Portfolio</a></li>
             <li><a href="" class="header-link">Contacts</a></li>
           </ul>
         </nav>
@@ -49,19 +49,24 @@
             </li>
           </ul>
         </address>
+        <button class="burger-btn" type="button" aria-label="Open menu button">
+          <svg class="burger-btn-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-burger-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <!--Unique content-->
     <main>
       <!--Hero section-->
-      <section class="hero">
+      <section class="hero hide">
         <div class="container hero-container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button type="button" class="hero-btn">Order Service</button>
         </div>
       </section>
       <!--Features section-->
-      <section class="features-section">
+      <section class="features-section section hide">
         <div class="container features-container">
           <h2 hidden class="section-title visually-hidden">Features</h2>
           <ul class="features-list">
@@ -117,12 +122,13 @@
         </div>
       </section>
       <!--Team section-->
-      <section class="team-section">
+      <section class="team-section section">
         <div class="container">
           <h2 class="section-title">Our Team</h2>
           <ul class="team-list">
             <li class="team-card">
               <img
+                class="team-pic"
                 src="./images/team/img-1.jpg"
                 alt="Mark Guerrero. Product Designer"
                 width="264"
@@ -165,6 +171,7 @@
             </li>
             <li class="team-card">
               <img
+                class="team-pic"
                 src="./images/team/img-2.jpg"
                 alt="Tom Ford. Frontend Developer"
                 width="264"
@@ -207,6 +214,7 @@
             </li>
             <li class="team-card">
               <img
+                class="team-pic"
                 src="./images/team/img-3.jpg"
                 alt="Camila Garcia. Marketing"
                 width="264"
@@ -249,6 +257,7 @@
             </li>
             <li class="team-card">
               <img
+                class="team-pic"
                 src="./images/team/img-4.jpg"
                 alt="Daniel Wilson. UI Designer"
                 width="264"
@@ -293,14 +302,14 @@
         </div>
       </section>
       <!--Portfolio section-->
-      <section class="portfolio-section">
+      <section class="portfolio-section section">
         <div class="container">
           <h2 id="portfolio" class="section-title">Our Portfolio</h2>
           <ul class="portfolio-list">
             <li class="portfolio-card">
               <div class="portfolio-wrapper">
                 <img
-                  class="portfolio-img"
+                  class="portfolio-pic"
                   src="./images/portfolio/img-1.jpg"
                   alt="Mark Guerrero. Product Designer"
                   width="360"
@@ -320,6 +329,7 @@
             <li class="portfolio-card">
               <div class="portfolio-wrapper">
                 <img
+                  class="portfolio-pic"
                   src="./images/portfolio/img-2.jpg"
                   alt="Tom Ford. Frontend Developer"
                   width="360"
@@ -339,6 +349,7 @@
             <li class="portfolio-card">
               <div class="portfolio-wrapper">
                 <img
+                  class="portfolio-pic"
                   src="./images/portfolio/img-3.jpg"
                   alt="Camila Garcia. Marketing"
                   width="360"
@@ -358,6 +369,7 @@
             <li class="portfolio-card">
               <div class="portfolio-wrapper">
                 <img
+                  class="portfolio-pic"
                   src="./images/portfolio/img-4.jpg"
                   alt="Daniel Wilson. UI Designer"
                   width="360"
@@ -377,6 +389,7 @@
             <li class="portfolio-card">
               <div class="portfolio-wrapper">
                 <img
+                  class="portfolio-pic"
                   src="./images/portfolio/img-5.jpg"
                   alt="Daniel Wilson. UI Designer"
                   width="360"
@@ -396,6 +409,7 @@
             <li class="portfolio-card">
               <div class="portfolio-wrapper">
                 <img
+                  class="portfolio-pic"
                   src="./images/portfolio/img-6.jpg"
                   alt="Daniel Wilson. UI Designer"
                   width="360"
@@ -417,7 +431,7 @@
       </section>
     </main>
     <!--Footer section-->
-    <footer class="footer" id="contacts">
+    <footer class="footer hide" id="contacts">
       <div class="container footer-container">
         <div class="footer-slogan">
           <a href="index.html" class="footer-logo"
@@ -485,14 +499,14 @@
     </footer>
 
     <!-- Modal window -->
-    <div class="backdrop is-open">
+    <div class="backdrop">
       <div class="modal">
         <button
           class="modal-close-btn"
           type="button"
           aria-label="Modal close button"
         >
-          <svg class="modal-close-btn-icon" width="8" height="8">
+          <svg class="close-btn-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-x-close"></use>
           </svg>
         </button>
@@ -597,6 +611,71 @@
           </div>
         </div> -->
       </div>
+    </div>
+
+    <!-- Burger menu -->
+    <div class="burger-menu">
+      <button class="menu-btn" type="button">
+        <svg class="close-btn-icon" width="8" height="8">
+          <use href="./images/icons.svg#icon-x-close"></use>
+        </svg>
+      </button>
+
+      <ul class="burger-menu-list">
+        <li class="burger-menu-item">
+          <a class="burger-menu-link active" href="">Studio</a>
+        </li>
+        <li class="burger-menu-item">
+          <a class="burger-menu-link" href="">Portfolio</a>
+        </li>
+        <li class="burger-menu-item">
+          <a class="burger-menu-link" href="">Contacts</a>
+        </li>
+      </ul>
+
+      <ul class="burger-menu-contacts">
+        <li class="burger-menu-item">
+          <a class="burger-menu-contact accent" href="tel:110001111111"
+            >+11 (000) 111-11-11</a
+          >
+        </li>
+        <li class="burger-menu-item">
+          <a class="burger-menu-contact" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+
+      <ul class="burger-menu-socials socials">
+        <li class="socials-item">
+          <a href="" class="socials-link">
+            <svg class="socials-icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a href="" class="socials-link">
+            <svg class="socials-icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a href="" class="socials-link">
+            <svg class="socials-icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a href="" class="socials-link">
+            <svg class="socials-icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </div>
   </body>
 </html>
